@@ -338,7 +338,7 @@ if($status != 'login'){
                                     </div>";
                                     }
                                     else{
-                                        echo "CV anda sudah diupload, silahkan klik link berikut untuk melihat ". "<a href='cv.php?cv=$d[cv]'>Google</a>". " atau anda bisa mengupload kembali";
+                                        echo "CV anda sudah diupload, silahkan klik link berikut untuk melihat ". "<a href='file/$d[cv]'>CV</a>". " atau anda bisa mengupload kembali";
                                         echo "<div class='form-group'>
                                         <div class='col-md-12'>
                                             <input type='file'
@@ -365,7 +365,7 @@ if($status != 'login'){
                                     </div>";
                                     }
                                     else{
-                                        echo "Sertifikat anda sudah diupload, silahkan klik link berikut untuk melihat ". "<a href='sertifikat.php?sertifikat=$d[sertifikat_keahlian]'>Google</a>". " atau anda bisa mengupload kembali";
+                                        echo "Sertifikat anda sudah diupload, silahkan klik link berikut untuk melihat ". "<a href='file/$d[sertifikat_keahlian]'>Sertifikat Keahlian</a>". " atau anda bisa mengupload kembali";
                                         echo "<div class='form-group'>
                                         <div class='col-md-12'>
                                             <input type='file'
@@ -385,7 +385,7 @@ if($status != 'login'){
                                     </div>";
                                     }
                                     else{
-                                        echo "Ijazah anda sudah diupload, silahkan klik link berikut untuk melihat ". "<a href='sertifikat.php?sertifikat=$d[sertifikat_keahlian]'>Google</a>". " atau anda bisa mengupload kembali";
+                                        echo "Ijazah anda sudah diupload, silahkan klik link berikut untuk melihat ". "<a href='file/$d[ijazah]'>Ijazah</a>". " atau anda bisa mengupload kembali";
                                         echo "<div class='form-group'>
                                         <div class='col-md-12'>
                                             <input type='file'
@@ -405,7 +405,7 @@ if($status != 'login'){
                                     </div>";
                                     }
                                     else{
-                                        echo "Surat Kesehatan anda sudah diupload, silahkan klik link berikut untuk melihat ". "<a href='sertifikat.php?sertifikat=$d[sertifikat_keahlian]'>Google</a>". " atau anda bisa mengupload kembali";
+                                        echo "Surat Kesehatan anda sudah diupload, silahkan klik link berikut untuk melihat ". "<a href='file/$d[surat_kesehatan]'>Surat Kesehatan</a>". " atau anda bisa mengupload kembali";
                                         echo "<div class='form-group'>
                                         <div class='col-md-12'>
                                             <input type='file'

@@ -3,9 +3,11 @@ include('koneksi.php');
 $id_pelamar = $_POST['id_pelamar'];
 $wawancara = $_POST['wawancara'];
 $surat_kesehatan = $_POST['surat_kesehatan'];
+$keterangan = $_POST['keterangan'];
+$catatan = $_POST['catatan'];
 
-$sql = mysqli_query($koneksi, "UPDATE alternatif set wawancara='$wawancara', kesehatan='$surat_kesehatan'");
-
+$sql = mysqli_query($koneksi, "UPDATE alternatif set wawancara='$wawancara', kesehatan='$surat_kesehatan' WHERE id_pelamar = '$id_pelamar'");
+$lol = mysqli_query($koneksi, "UPDATE pelamar SET keterangan='$keterangan', catatan='$catatan' WHERE id_pelamar = '$id_pelamar'");
 //ambil data alternatif
 $query = mysqli_query($koneksi, "SELECT * FROM alternatif WHERE id_pelamar = '$id_pelamar'");
 $a = mysqli_fetch_array($query);

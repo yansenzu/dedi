@@ -77,7 +77,7 @@ $d = mysqli_fetch_assoc($sql);
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-body">
-                                <form class="form-horizontal form-material" method="post" action="update_profile.php" enctype="multipart/form-data">
+                                <form class="form-horizontal form-material" method="post" action="update_profile_user.php" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label class="col-md-12">Full Name</label>
                                         <div class="col-md-12">
@@ -182,12 +182,6 @@ $d = mysqli_fetch_assoc($sql);
                                     </div>";
                                     }
                                     ?>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Nilai Wawancara</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="wawancara" value="<?php echo $d['wawancara'];?>" class="form-control form-control-line">
-                                        </div>
-                                    </div>
                                     <?php 
                                     if($d['surat_kesehatan'] == NULL){
                                         echo "Surat Kesehatan tidak di upload";
@@ -198,12 +192,7 @@ $d = mysqli_fetch_assoc($sql);
                                     }
                                     else{
                                         echo "Surat Kesehatan anda sudah diupload, silahkan klik link berikut untuk melihat ". "<a href='../file/$d[surat_kesehatan]'>Lihat Sertifikat Keahlian</a>". "";
-                                        echo "<div class='form-group'>
-                                        <div class='col-md-12'>
-                                            <input type='text'
-                                                class='form-control form-control-line' placeholder= 'Input Nilai' name='surat_kesehatan'>
-                                        </div>
-                                    </div>";
+                                        
                                     }
                                     ?>
                                     <div class="form-group">

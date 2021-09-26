@@ -1,5 +1,6 @@
 <?php
 include('koneksi.php');
+error_reporting(0);
 session_start();
 $id = $_GET['id'];
 $id_job = $_GET['id'];
@@ -26,6 +27,10 @@ $sql4 = mysqli_query($koneksi, "SELECT * FROM pelamar WHERE pengalaman IS NULL A
 $data4 = mysqli_num_rows($sql4);
 $sql5 = mysqli_query($koneksi, "SELECT * FROM pelamar WHERE sertifikat_keahlian IS NULL AND nik = '$nik'");
 $data5 = mysqli_num_rows($sql5);
+$sql6 = mysqli_query($koneksi, "SELECT * FROM pelamar WHERE keterangan ='Tidak lulus verifikasi' AND nik = '$nik'");
+$data6 = mysqli_num_rows($sql6);
+$msg = mysqli_fetch_array($sql6);
+$pesan = $msg['catatan'];
 if($data == 1)
 {
     echo "
@@ -63,6 +68,15 @@ else if($data5 == 1){
     echo "
     <script>
     alert('Silahkan lengkapi data sertifikat keahlian anda terlebih dahulu')
+    location.href = 'profile.php';
+    </script>
+    ";
+}
+else if($data6 == 1)
+{
+    echo "
+    <script>
+    alert('$pesan')
     location.href = 'profile.php';
     </script>
     ";
